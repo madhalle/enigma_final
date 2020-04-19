@@ -34,7 +34,7 @@ class ShiftTest < Minitest::Test
     #definitely needs a stub
     @offset.generate
 
-    @shift.generate
+    @shift.generate(@key, @offset)
     assert_equal 11, @shift.a_shift
     assert_equal 55, @shift.b_shift
     assert_equal 18, @shift.c_shift
