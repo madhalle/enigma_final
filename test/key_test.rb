@@ -18,4 +18,10 @@ class KeyTest < Minitest::Test
     assert_nil @key.c_key
     assert_nil @key.d_key
   end
+
+  def test_generate_key
+    @key.stubs(:rand).returns("5188")
+    assert_equal "05188", @key.generate
+  end
+
 end
