@@ -3,6 +3,8 @@ require 'date'
 require './lib/shift'
 require './lib/key'
 require './lib/offset'
+require 'mocha/minitest'
+
 
 class ShiftTest < Minitest::Test
   def setup
@@ -21,5 +23,21 @@ class ShiftTest < Minitest::Test
     assert_equal 0, @shift.b_shift
     assert_equal 0, @shift.c_shift
     assert_equal 0, @shift.d_shift
+  end
+
+  def test_it_can_generate_shifts
+    @key.stubs(:rand).returns("5188")
+    @key.generate
+    @key.split
+
+    @offset.date
+    #definitely needs a stub
+    @offset.generate
+
+    @shift.generate
+    assert_equal 11, @shift.a_shift
+    assert_equal 55, @shift.b_shift
+    assert_equal 18, @shift.c_shift
+    assert_equal 88, @shift.d_shift
   end
 end
