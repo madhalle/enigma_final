@@ -19,4 +19,12 @@ class OffsetTest < Minitest::Test
     # todays_date = Time.now.strftime("%d%m%y")
     assert_equal todays_date, @offset.date
   end
+
+  def test_create_offsets
+    @offset.generate
+    assert_equal 6, @offset.a_offset
+    assert_equal 4, @offset.b_offset
+    assert_equal 0, @offset.c_offset
+    assert_equal 0, @offset.d_offset
+  end
 end
