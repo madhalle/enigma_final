@@ -7,4 +7,9 @@ class Key
     @c_key = c_key
     @d_key = d_key
   end
+
+  def generate
+    @key = '0' + rand(9999).to_s
+  end
+  
 end
