@@ -11,4 +11,8 @@ class ShiftTest < Minitest::Test
     @key = Key.new
     @offset = Offset.new
   end
-end 
+  
+  def test_it_exists
+    assert_instance_of Shift, @shift
+  end
+end
