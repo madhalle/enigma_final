@@ -21,6 +21,14 @@ class KeyTest < Minitest::Test
     @key.random_number_generator
     assert_equal "05188", @key.key
   end
+
+  def test_it_has_keys
+    @key.stubs(:rand).returns("5188")
+    @key.generate
+
+    expected = {:A => 05, :B => 51, :C => 18, :D => 88}
+    assert_equal expected, @key.keys
+  end
   # def test_generate_key
   #   @key.stubs(:rand).returns("5188")
   #   assert_equal "05188", @key.generate
