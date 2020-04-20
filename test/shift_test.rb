@@ -18,13 +18,6 @@ class ShiftTest < Minitest::Test
     assert_instance_of Shift, @shift
   end
 
-  def test_it_has_attributes
-    assert_equal 0, @shift.a_shift
-    assert_equal 0, @shift.b_shift
-    assert_equal 0, @shift.c_shift
-    assert_equal 0, @shift.d_shift
-  end
-
   def test_it_can_generate_shifts
     @key.stubs(:rand).returns("5188")
     @key.generate
@@ -34,10 +27,8 @@ class ShiftTest < Minitest::Test
     #definitely needs a stub
     @offset.generate
 
-    @shift.generate(@key, @offset)
-    assert_equal 11, @shift.a_shift
-    assert_equal 55, @shift.b_shift
-    assert_equal 18, @shift.c_shift
-    assert_equal 88, @shift.d_shift
+    expected = {:A=>11, :B=>55, :C=>18, :D=>88}
+    assert_equal expected, @shift.generate(@key, @offset)
+
   end
 end
