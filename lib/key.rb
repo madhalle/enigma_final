@@ -5,7 +5,7 @@ class Key
     @keys = Hash.new
   end
 
-  def generate
+  def random_number_generator
     @key = '0' + rand(9999).to_s
   end
 
