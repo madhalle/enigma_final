@@ -29,19 +29,4 @@ class OffsetTest < Minitest::Test
     expected = { :A => 6, :B => 4, :C => 0, :D => 0}
     assert_equal expected, @offset.generate
   end
-
-  # def test_offset_date
-  #   #stubs use case here?
-  #   todays_date = '190420'
-  #   # todays_date = Time.now.strftime("%d%m%y")
-  #   assert_equal todays_date, @offset.date
-  # end
-  #
-  # def test_create_offsets
-  #   @offset.generate
-  #   assert_equal 6, @offset.a_offset
-  #   assert_equal 4, @offset.b_offset
-  #   assert_equal 0, @offset.c_offset
-  #   assert_equal 0, @offset.d_offset
-  # end
 end

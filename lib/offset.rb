@@ -19,5 +19,4 @@ class Offset
     @offsets[:D] = offset[3].to_i
     @offsets
   end
-
 end
