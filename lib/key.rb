@@ -9,11 +9,12 @@ class Key
     @key = '0' + rand(9999).to_s
   end
 
-  def split
-    @a_key = @key[0..1].to_i
-    @b_key = @key[1..2].to_i
-    @c_key = @key[2..3].to_i
-    @d_key = @key[3..4].to_i
-  end
+  def generate
+    random_number_generator
 
+    @keys[:A] = @key[0..1].to_i
+    @keys[:B] = @key[1..2].to_i
+    @keys[:C] = @key[2..3].to_i
+    @keys[:D] = @key[3..4].to_i
+  end
 end
