@@ -5,8 +5,8 @@ class Offset
     @offsets = Hash.new
   end
 
-  def date
-    Time.now.strftime("%d%m%y")
+  def create_date
+    @offset_date = Time.now.strftime("%d%m%y")
   end
 
   def generate
