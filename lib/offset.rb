@@ -1,10 +1,8 @@
 class Offset
-  attr_reader :a_offset, :b_offset, :c_offset, :d_offset
+  attr_reader :offset_date, :offsets
   def initialize
-    @a_offset = nil
-    @b_offset = nil
-    @c_offset = nil
-    @d_offset = nil
+    @offset_date = offset_date
+    @offsets = Hash.new
   end
 
   def date

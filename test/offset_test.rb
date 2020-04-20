@@ -14,8 +14,8 @@ class OffsetTest < Minitest::Test
   end
 
   def test_it_has_attributes
-    assert_nil @offset_date
-    assert_equal ({}), @offsets
+    assert_nil @offset.offset_date
+    assert_equal ({}), @offset.offsets
   end
 
   # def test_offset_date
