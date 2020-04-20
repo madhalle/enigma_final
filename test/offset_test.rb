@@ -18,6 +18,13 @@ class OffsetTest < Minitest::Test
     assert_equal ({}), @offset.offsets
   end
 
+  def test_create_date
+    @offset.create_date
+    date = Time.now.strftime("%d%m%y")
+    # date1 = (Timecop.freeze(Date.today))
+    assert_equal date, @offset.offset_date
+  end
+
   # def test_offset_date
   #   #stubs use case here?
   #   todays_date = '190420'
