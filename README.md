@@ -9,7 +9,7 @@
 3 hashes galore, good enumerable use in enigma
 
 ## Test Driven Development
-3 testing to good! coverage so good!
+3.5 stubs used for rnadom number. testing to good! coverage so good!
 
 ## Version Control
-4 so many commits! so many comments! appropriate pull requests
+4 so many commits! so many comments! appropriate pull requests!
