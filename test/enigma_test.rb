@@ -41,4 +41,9 @@ class EnigmaTest < Minitest::Test
     # assert_equal expected, @enigma.encrypt
   end
 
+  def test_decrypt
+    @enigma.encrypt
+
+    assert_instance_of Hash, @enigma.decrypt
+  end
 end
