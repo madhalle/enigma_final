@@ -65,4 +65,37 @@ class Enigma
 
     whole_shebang
   end
+
+  def decrypt
+    decrypted_message = []
+
+    @encrypted_message.each_with_index do |letter, index|
+      if @alphabet.include?(letter.downcase) != true
+        decrypted_message << letter
+      elsif (index % 4 == 0)
+        alphabet_index = find_index_in_alphabet(letter)
+        new_index = (alphabet_index - @shift[:A])
+        decrypted_message << find_alphabet_letter(new_index)
+      elsif (index % 4 == 1)
+        alphabet_index = find_index_in_alphabet(letter)
+        new_index = (alphabet_index - @shift[:B])
+        decrypted_message << find_alphabet_letter(new_index)
+      elsif (index % 4 == 2)
+        alphabet_index = find_index_in_alphabet(letter)
+        new_index = (alphabet_index - @shift[:C])
+        decrypted_message << find_alphabet_letter(new_index)
+      elsif (index % 4 == 3)
+        alphabet_index = find_index_in_alphabet(letter)
+        new_index = (alphabet_index - @shift[:D])
+        decrypted_message << find_alphabet_letter(new_index)
+      end
+    end
+    whole_shebang = Hash.new
+
+    whole_shebang[:message] = decrypted_message.join
+    whole_shebang[:key] = @key[:key]
+    whole_shebang[:date] = @date[:date]
+
+    whole_shebang
+  end
 end
