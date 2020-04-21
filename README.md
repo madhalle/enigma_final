@@ -12,4 +12,4 @@
 3.5 stubs used for rnadom number. testing to good! coverage so good!
 
 ## Version Control
-4 so many commits! so many comments! appropriate pull requests!
+4 so many commits(77)! so many comments! appropriate pull requests!
