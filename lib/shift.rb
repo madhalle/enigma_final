@@ -12,4 +12,5 @@ class Shift
     shift_hash
 
   end
+
 end

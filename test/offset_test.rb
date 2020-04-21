@@ -17,7 +17,6 @@ class OffsetTest < Minitest::Test
   def test_create_date
     @offset.create_date
     date = Time.now.strftime("%d%m%y")
-    # date1 = (Timecop.freeze(Date.today))
     assert_equal date, @offset.offset_date
   end
 

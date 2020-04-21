@@ -22,7 +22,6 @@ class ShiftTest < Minitest::Test
     @key.stubs(:rand).returns("5188")
     @key.generate
 
-    #definitely needs a stub
     @offset.generate
 
     expected = {:A=>11, :B=>55, :C=>18, :D=>88}
