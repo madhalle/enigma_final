@@ -21,9 +21,7 @@ class ShiftTest < Minitest::Test
   def test_it_can_generate_shifts
     @key.stubs(:rand).returns("5188")
     @key.generate
-    @key.split
 
-    @offset.date
     #definitely needs a stub
     @offset.generate
 
