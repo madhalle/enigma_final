@@ -25,9 +25,6 @@ class Enigma
   def find_alphabet_letter(index)
     if index >= 27 || index < 0
       @alphabet[index%27]
-    # elsif index < 0
-      # alphabet_backwards = @alphabet.reverse
-      # alphabet_backwards[index%27]
     else
       @alphabet[index]
     end

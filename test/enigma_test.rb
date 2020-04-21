@@ -33,10 +33,7 @@ class EnigmaTest < Minitest::Test
 
   def test_encrypt_decrypt_method
     assert_instance_of Hash, @enigma.encrypt
-  # end
-  #
-  # def test_decrypt
-  #   @enigma.encrypt
+
     assert_equal "hello world.", @enigma.decrypt[:message]
     assert_instance_of Hash, @enigma.decrypt
   end
