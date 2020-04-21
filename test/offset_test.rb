@@ -22,7 +22,7 @@ class OffsetTest < Minitest::Test
   end
 
   def test_create_offsets
-    expected = { :A => 6, :B => 4, :C => 0, :D => 0}
+    expected = {:offsets=>{:A=>6, :B=>4, :C=>0, :D=>0}, :date=>"200420"}
     assert_equal expected, @offset.generate
   end
 end
