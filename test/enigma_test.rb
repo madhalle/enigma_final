@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+require_relative "test_helper"
 require 'mocha/minitest'
 require './lib/shift'
 require './lib/enigma'
