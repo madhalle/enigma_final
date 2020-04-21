@@ -16,7 +16,7 @@ class EnigmaTest < Minitest::Test
   def test_it_has_attributes
     assert_equal "Hello world.", @enigma.message
     assert_instance_of Hash, @enigma.key
-    assert_equal 5 || 4, @enigma.key[:key].length
+    assert_equal 5, @enigma.key[:key].length
 
 
     expected2 = {:offsets=>{:A=>6, :B=>4, :C=>0, :D=>0}, :date=>"200420"}
