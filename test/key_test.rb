@@ -11,11 +11,6 @@ class KeyTest < Minitest::Test
     assert_instance_of Key, @key
   end
 
-  def test_it_has_attributes
-    assert_nil @key.key
-    assert_equal ({}), @key.keys
-  end
-
   def test_random_number_generator
     @key.stubs(:rand).returns("5188")
     @key.random_number_generator
@@ -29,4 +24,5 @@ class KeyTest < Minitest::Test
     expected = {:A => 05, :B => 51, :C => 18, :D => 88}
     assert_equal expected, @key.keys
   end
+
 end
