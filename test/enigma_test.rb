@@ -31,12 +31,13 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.alphabet
   end
 
-  def test_encrypt_method
+  def test_encrypt_decrypt_method
     assert_instance_of Hash, @enigma.encrypt
-  end
-
-  def test_decrypt
-    @enigma.encrypt
+  # end
+  #
+  # def test_decrypt
+  #   @enigma.encrypt
+    assert_equal "hello world.", @enigma.decrypt[:message]
     assert_instance_of Hash, @enigma.decrypt
   end
 end

@@ -16,8 +16,6 @@ writer.write(encrypted_text[:message])
 writer.close
 
 puts "Created #{ARGV[1]} with the key #{encrypted_text[:key]} and date #{encrypted_text[:date]}"
-# encrypted.tct = message.txt.encrypt
-# puts encrypted.tbt
 
 
 #ruby encrypt.rb message.txt encrypted.txt

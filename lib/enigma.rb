@@ -1,9 +1,13 @@
+require_relative 'key'
+require_relative 'offset'
+require_relative 'shift'
 class Enigma
   attr_reader :message, :key, :date, :alphabet, :shift, :encrypted_message
-  def initialize(message, key = Key.new.generate, date = Offset.new.generate )
+  def initialize(message, key = Key.new, date = Offset.new)
     @message = message
-    @key = key
-    @date = date
+    @key = key.generate
+
+    @date = date.generate
     @alphabet = []
     @shift = shift
     @encrypted_message = []
@@ -19,10 +23,11 @@ class Enigma
   end
 
   def find_alphabet_letter(index)
-    if index >= 27
+    if index >= 27 || index < 0
       @alphabet[index%27]
-    elsif index < 0
-      @alphabet[index%27]
+    # elsif index < 0
+      # alphabet_backwards = @alphabet.reverse
+      # alphabet_backwards[index%27]
     else
       @alphabet[index]
     end
@@ -62,13 +67,12 @@ class Enigma
     whole_shebang[:message] = @encrypted_message.join
     whole_shebang[:key] = @key[:key]
     whole_shebang[:date] = @date[:date]
-
     whole_shebang
   end
 
   def decrypt
+    generate_shift
     decrypted_message = []
-
     @encrypted_message.each_with_index do |letter, index|
       if @alphabet.include?(letter.downcase) != true
         decrypted_message << letter
@@ -93,8 +97,8 @@ class Enigma
     whole_shebang = Hash.new
 
     whole_shebang[:message] = decrypted_message.join
-    whole_shebang[:key] = @key[:key]
-    whole_shebang[:date] = @date[:date]
+    whole_shebang[:key] = @key
+    whole_shebang[:date] = @date
 
     whole_shebang
   end
