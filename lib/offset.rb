@@ -17,6 +17,10 @@ class Offset
     @offsets[:B] = offset[1].to_i
     @offsets[:C] = offset[2].to_i
     @offsets[:D] = offset[3].to_i
-    @offsets
+    offset_info = Hash.new
+    offset_info[:offsets]= @offsets
+    offset_info[:date]= @offset_date
+    offset_info
   end
+
 end

@@ -16,5 +16,9 @@ class Key
     @keys[:B] = @key[1..2].to_i
     @keys[:C] = @key[2..3].to_i
     @keys[:D] = @key[3..4].to_i
+    key_info = Hash.new
+    key_info[:keys] = @keys
+    key_info[:key] = @key
+    key_info
   end
 end

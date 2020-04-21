@@ -1,6 +1,7 @@
 require_relative 'test_helper.rb'
 require 'mocha/minitest'
 require 'time'
+# require 'timecop'
 require 'date'
 require './lib/offset'
 
@@ -13,11 +14,6 @@ class OffsetTest < Minitest::Test
     assert_instance_of Offset, @offset
   end
 
-  def test_it_has_attributes
-    assert_nil @offset.offset_date
-    assert_equal ({}), @offset.offsets
-  end
-
   def test_create_date
     @offset.create_date
     date = Time.now.strftime("%d%m%y")
@@ -26,7 +22,7 @@ class OffsetTest < Minitest::Test
   end
 
   def test_create_offsets
-    expected = { :A => 6, :B => 4, :C => 0, :D => 0}
+    expected = {:offsets=>{:A=>6, :B=>4, :C=>0, :D=>0}, :date=>"200420"}
     assert_equal expected, @offset.generate
   end
 end
