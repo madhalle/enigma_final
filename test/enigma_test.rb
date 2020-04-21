@@ -17,7 +17,6 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Hash, @enigma.key
     assert_equal 5, @enigma.key[:key].length
 
-
     expected2 = {:offsets=>{:A=>6, :B=>4, :C=>0, :D=>0}, :date=>"200420"}
     assert_equal expected2, @enigma.date
     assert_instance_of Hash, @enigma.date
@@ -43,7 +42,6 @@ class EnigmaTest < Minitest::Test
 
   def test_decrypt
     @enigma.encrypt
-
     assert_instance_of Hash, @enigma.decrypt
   end
 end
