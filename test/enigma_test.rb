@@ -33,4 +33,13 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.alphabet
   end
 
+  def test_encrypt_method
+    assert_instance_of Hash, @enigma.encrypt
+    #if stubs were working for key and date
+    # expected = {:message=>String,
+    #             :key=>String,
+    #             :date=>String}
+    # assert_equal expected, @enigma.encrypt
+  end
+
 end
