@@ -1,12 +1,15 @@
 # enigma_final
--You should be able to demonstrate in your evaluation that SimpleCov
-reports accurate test coverage statistics at 95% coverage or above.
+## Functionality
+2.75 command line not working
 
--Make sure that you are working on branches, using pull requests, and
-committing frequently in small chunks of functionality.
+## Object Oriented Programming
+3.5 One module used, some classes would maybe be more readable
 
-#learning goals
--Practice breaking a program into logical components
--Build classes that demonstrate single responsibilities
--Test drive a well-designed Object Oriented solution
--Work with file i/o
+## Ruby Conventions and Mechanics
+3 hashes galore, good enumerable use in enigma
+
+## Test Driven Development
+3 testing to good! coverage so good!
+
+##Version Control
+4 so many commits! so many comments! appropriate pull requests
