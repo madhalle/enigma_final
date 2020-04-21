@@ -6,10 +6,7 @@ class Key
   end
 
   def random_number_generator
-    @key = ('0' + rand(1..9999).to_s)
-    if @key.length != 5
-      random_number_generator
-    end 
+    @key = '0' + rand(9999).to_s
   end
 
   def generate
