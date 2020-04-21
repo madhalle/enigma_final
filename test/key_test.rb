@@ -12,6 +12,8 @@ class KeyTest < Minitest::Test
   end
 
   def test_random_number_generator
+    @key.random_number_generator
+    assert_equal 5, @key.key.length
     @key.stubs(:rand).returns("5188")
     @key.random_number_generator
     assert_equal "05188", @key.key
