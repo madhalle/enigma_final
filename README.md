@@ -1,6 +1,6 @@
 # enigma_final
 ## Functionality
-2 encrypt and decrypt working, command line not working
+2.5 encrypt and decrypt working, command line writing encrypted file, decrypted file not being written correctly
 
 ## Object Oriented Programming
 3.5 One module used, some classes would maybe be more readable
