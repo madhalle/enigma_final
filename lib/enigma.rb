@@ -6,4 +6,9 @@ class Enigma
     @date = date
     @alphabet = []
   end
+
+  def create_alphabet
+    @alphabet << (("a".."z").to_a << " ")
+    @alphabet.flatten!
+  end
 end

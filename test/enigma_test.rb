@@ -27,10 +27,10 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_generate_alphabet
-    @encrypter.create_alphabet
+    @enigma.create_alphabet
     expected = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
            "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
-    assert_equal expected, @encrypter.alphabet
+    assert_equal expected, @enigma.alphabet
   end
 
 end
